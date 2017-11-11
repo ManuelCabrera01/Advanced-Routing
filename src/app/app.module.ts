@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactServiceService } from './contact-service.service';
 import { ContactComponent } from './contact/contact.component';
-
+import { FormsModule } from '@angular/forms'
 const routes: Routes = [
   { path: '', component: ContactListComponent },
   { path: 'contact/:id', component: ContactComponent ,
@@ -23,10 +23,13 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ContactListComponent,
-    ContactComponent
+    ContactComponent,
+    ContactOverviewComponent,
+    ContactEditComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ContactServiceService],
